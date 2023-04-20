@@ -1,0 +1,519 @@
+卷 DATA 的文件夹 PATH 列表
+卷序列号为 8A36-DC3A
+D:.
+│  .gitignore
+│  counter.js
+│  index.html
+│  javascript.svg
+│  main.js
+│  package.json
+│  style.css
+│  yarn.lock
+│  文件树.txt
+│  
+├─node_modules
+│  │  .yarn-integrity
+│  │  
+│  ├─.bin
+│  │      esbuild
+│  │      esbuild.cmd
+│  │      nanoid
+│  │      nanoid.cmd
+│  │      resolve
+│  │      resolve.cmd
+│  │      rollup
+│  │      rollup.cmd
+│  │      vite
+│  │      vite.cmd
+│  │      
+│  ├─@esbuild
+│  │  └─win32-x64
+│  │          esbuild.exe
+│  │          package.json
+│  │          README.md
+│  │          
+│  ├─esbuild
+│  │  │  install.js
+│  │  │  LICENSE.md
+│  │  │  package.json
+│  │  │  README.md
+│  │  │  
+│  │  ├─bin
+│  │  │      esbuild
+│  │  │      
+│  │  └─lib
+│  │          main.d.ts
+│  │          main.js
+│  │          
+│  ├─function-bind
+│  │  │  .editorconfig
+│  │  │  .eslintrc
+│  │  │  .jscs.json
+│  │  │  .npmignore
+│  │  │  .travis.yml
+│  │  │  implementation.js
+│  │  │  index.js
+│  │  │  LICENSE
+│  │  │  package.json
+│  │  │  README.md
+│  │  │  
+│  │  └─test
+│  │          .eslintrc
+│  │          index.js
+│  │          
+│  ├─has
+│  │  │  LICENSE-MIT
+│  │  │  package.json
+│  │  │  README.md
+│  │  │  
+│  │  ├─src
+│  │  │      index.js
+│  │  │      
+│  │  └─test
+│  │          index.js
+│  │          
+│  ├─is-core-module
+│  │  │  .eslintrc
+│  │  │  .nycrc
+│  │  │  CHANGELOG.md
+│  │  │  core.json
+│  │  │  index.js
+│  │  │  LICENSE
+│  │  │  package.json
+│  │  │  README.md
+│  │  │  
+│  │  └─test
+│  │          index.js
+│  │          
+│  ├─nanoid
+│  │  │  index.browser.cjs
+│  │  │  index.browser.js
+│  │  │  index.cjs
+│  │  │  index.d.ts
+│  │  │  index.js
+│  │  │  LICENSE
+│  │  │  nanoid.js
+│  │  │  package.json
+│  │  │  README.md
+│  │  │  
+│  │  ├─async
+│  │  │      index.browser.cjs
+│  │  │      index.browser.js
+│  │  │      index.cjs
+│  │  │      index.d.ts
+│  │  │      index.js
+│  │  │      index.native.js
+│  │  │      package.json
+│  │  │      
+│  │  ├─bin
+│  │  │      nanoid.cjs
+│  │  │      
+│  │  ├─non-secure
+│  │  │      index.cjs
+│  │  │      index.d.ts
+│  │  │      index.js
+│  │  │      package.json
+│  │  │      
+│  │  └─url-alphabet
+│  │          index.cjs
+│  │          index.js
+│  │          package.json
+│  │          
+│  ├─path-parse
+│  │      index.js
+│  │      LICENSE
+│  │      package.json
+│  │      README.md
+│  │      
+│  ├─picocolors
+│  │      LICENSE
+│  │      package.json
+│  │      picocolors.browser.js
+│  │      picocolors.d.ts
+│  │      picocolors.js
+│  │      README.md
+│  │      types.ts
+│  │      
+│  ├─postcss
+│  │  │  LICENSE
+│  │  │  package.json
+│  │  │  README.md
+│  │  │  
+│  │  ├─lib
+│  │  │      at-rule.d.ts
+│  │  │      at-rule.js
+│  │  │      comment.d.ts
+│  │  │      comment.js
+│  │  │      container.d.ts
+│  │  │      container.js
+│  │  │      css-syntax-error.d.ts
+│  │  │      css-syntax-error.js
+│  │  │      declaration.d.ts
+│  │  │      declaration.js
+│  │  │      document.d.ts
+│  │  │      document.js
+│  │  │      fromJSON.d.ts
+│  │  │      fromJSON.js
+│  │  │      input.d.ts
+│  │  │      input.js
+│  │  │      lazy-result.d.ts
+│  │  │      lazy-result.js
+│  │  │      list.d.ts
+│  │  │      list.js
+│  │  │      map-generator.js
+│  │  │      no-work-result.d.ts
+│  │  │      no-work-result.js
+│  │  │      node.d.ts
+│  │  │      node.js
+│  │  │      parse.d.ts
+│  │  │      parse.js
+│  │  │      parser.js
+│  │  │      postcss.d.ts
+│  │  │      postcss.js
+│  │  │      postcss.mjs
+│  │  │      previous-map.d.ts
+│  │  │      previous-map.js
+│  │  │      processor.d.ts
+│  │  │      processor.js
+│  │  │      result.d.ts
+│  │  │      result.js
+│  │  │      root.d.ts
+│  │  │      root.js
+│  │  │      rule.d.ts
+│  │  │      rule.js
+│  │  │      stringifier.d.ts
+│  │  │      stringifier.js
+│  │  │      stringify.d.ts
+│  │  │      stringify.js
+│  │  │      symbols.js
+│  │  │      terminal-highlight.js
+│  │  │      tokenize.js
+│  │  │      warn-once.js
+│  │  │      warning.d.ts
+│  │  │      warning.js
+│  │  │      
+│  │  └─node_modules
+│  │      └─.bin
+│  │              nanoid
+│  │              nanoid.cmd
+│  │              
+│  ├─resolve
+│  │  │  .editorconfig
+│  │  │  .eslintrc
+│  │  │  async.js
+│  │  │  index.js
+│  │  │  LICENSE
+│  │  │  package.json
+│  │  │  readme.markdown
+│  │  │  SECURITY.md
+│  │  │  sync.js
+│  │  │  
+│  │  ├─.github
+│  │  │      FUNDING.yml
+│  │  │      
+│  │  ├─bin
+│  │  │      resolve
+│  │  │      
+│  │  ├─example
+│  │  │      async.js
+│  │  │      sync.js
+│  │  │      
+│  │  ├─lib
+│  │  │      async.js
+│  │  │      caller.js
+│  │  │      core.js
+│  │  │      core.json
+│  │  │      homedir.js
+│  │  │      is-core.js
+│  │  │      node-modules-paths.js
+│  │  │      normalize-options.js
+│  │  │      sync.js
+│  │  │      
+│  │  └─test
+│  │      │  core.js
+│  │      │  dotdot.js
+│  │      │  faulty_basedir.js
+│  │      │  filter.js
+│  │      │  filter_sync.js
+│  │      │  home_paths.js
+│  │      │  home_paths_sync.js
+│  │      │  mock.js
+│  │      │  mock_sync.js
+│  │      │  module_dir.js
+│  │      │  node-modules-paths.js
+│  │      │  node_path.js
+│  │      │  nonstring.js
+│  │      │  pathfilter.js
+│  │      │  precedence.js
+│  │      │  resolver.js
+│  │      │  resolver_sync.js
+│  │      │  shadowed_core.js
+│  │      │  subdirs.js
+│  │      │  symlinks.js
+│  │      │  
+│  │      ├─dotdot
+│  │      │  │  index.js
+│  │      │  │  
+│  │      │  └─abc
+│  │      │          index.js
+│  │      │          
+│  │      ├─module_dir
+│  │      │  ├─xmodules
+│  │      │  │  └─aaa
+│  │      │  │          index.js
+│  │      │  │          
+│  │      │  ├─ymodules
+│  │      │  │  └─aaa
+│  │      │  │          index.js
+│  │      │  │          
+│  │      │  └─zmodules
+│  │      │      └─bbb
+│  │      │              main.js
+│  │      │              package.json
+│  │      │              
+│  │      ├─node_path
+│  │      │  ├─x
+│  │      │  │  ├─aaa
+│  │      │  │  │      index.js
+│  │      │  │  │      
+│  │      │  │  └─ccc
+│  │      │  │          index.js
+│  │      │  │          
+│  │      │  └─y
+│  │      │      ├─bbb
+│  │      │      │      index.js
+│  │      │      │      
+│  │      │      └─ccc
+│  │      │              index.js
+│  │      │              
+│  │      ├─pathfilter
+│  │      │  └─deep_ref
+│  │      │          main.js
+│  │      │          
+│  │      ├─precedence
+│  │      │  │  aaa.js
+│  │      │  │  bbb.js
+│  │      │  │  
+│  │      │  ├─aaa
+│  │      │  │      index.js
+│  │      │  │      main.js
+│  │      │  │      
+│  │      │  └─bbb
+│  │      │          main.js
+│  │      │          
+│  │      ├─resolver
+│  │      │  │  cup.coffee
+│  │      │  │  foo.js
+│  │      │  │  mug.coffee
+│  │      │  │  mug.js
+│  │      │  │  
+│  │      │  ├─baz
+│  │      │  │      doom.js
+│  │      │  │      package.json
+│  │      │  │      quux.js
+│  │      │  │      
+│  │      │  ├─browser_field
+│  │      │  │      a.js
+│  │      │  │      b.js
+│  │      │  │      package.json
+│  │      │  │      
+│  │      │  ├─dot_main
+│  │      │  │      index.js
+│  │      │  │      package.json
+│  │      │  │      
+│  │      │  ├─dot_slash_main
+│  │      │  │      index.js
+│  │      │  │      package.json
+│  │      │  │      
+│  │      │  ├─false_main
+│  │      │  │      index.js
+│  │      │  │      package.json
+│  │      │  │      
+│  │      │  ├─incorrect_main
+│  │      │  │      index.js
+│  │      │  │      package.json
+│  │      │  │      
+│  │      │  ├─invalid_main
+│  │      │  │      package.json
+│  │      │  │      
+│  │      │  ├─malformed_package_json
+│  │      │  │      index.js
+│  │      │  │      package.json
+│  │      │  │      
+│  │      │  ├─multirepo
+│  │      │  │  │  lerna.json
+│  │      │  │  │  package.json
+│  │      │  │  │  
+│  │      │  │  └─packages
+│  │      │  │      ├─package-a
+│  │      │  │      │      index.js
+│  │      │  │      │      package.json
+│  │      │  │      │      
+│  │      │  │      └─package-b
+│  │      │  │              index.js
+│  │      │  │              package.json
+│  │      │  │              
+│  │      │  ├─nested_symlinks
+│  │      │  │  └─mylib
+│  │      │  │          async.js
+│  │      │  │          package.json
+│  │      │  │          sync.js
+│  │      │  │          
+│  │      │  ├─other_path
+│  │      │  │  │  root.js
+│  │      │  │  │  
+│  │      │  │  └─lib
+│  │      │  │          other-lib.js
+│  │      │  │          
+│  │      │  ├─quux
+│  │      │  │  └─foo
+│  │      │  │          index.js
+│  │      │  │          
+│  │      │  ├─same_names
+│  │      │  │  │  foo.js
+│  │      │  │  │  
+│  │      │  │  └─foo
+│  │      │  │          index.js
+│  │      │  │          
+│  │      │  ├─symlinked
+│  │      │  │  ├─package
+│  │      │  │  │      bar.js
+│  │      │  │  │      package.json
+│  │      │  │  │      
+│  │      │  │  └─_
+│  │      │  │      ├─node_modules
+│  │      │  │      │      foo.js
+│  │      │  │      │      
+│  │      │  │      └─symlink_target
+│  │      │  │              .gitkeep
+│  │      │  │              
+│  │      │  └─without_basedir
+│  │      │          main.js
+│  │      │          
+│  │      └─shadowed_core
+│  │          └─node_modules
+│  │              └─util
+│  │                      index.js
+│  │                      
+│  ├─rollup
+│  │  │  LICENSE.md
+│  │  │  package.json
+│  │  │  README.md
+│  │  │  
+│  │  └─dist
+│  │      │  loadConfigFile.d.ts
+│  │      │  loadConfigFile.js
+│  │      │  rollup.d.ts
+│  │      │  rollup.js
+│  │      │  
+│  │      ├─bin
+│  │      │      rollup
+│  │      │      
+│  │      ├─es
+│  │      │  │  package.json
+│  │      │  │  rollup.js
+│  │      │  │  
+│  │      │  └─shared
+│  │      │          node-entry.js
+│  │      │          watch.js
+│  │      │          
+│  │      └─shared
+│  │              fsevents-importer.js
+│  │              index.js
+│  │              loadConfigFile.js
+│  │              rollup.js
+│  │              watch-cli.js
+│  │              watch-proxy.js
+│  │              watch.js
+│  │              
+│  ├─source-map-js
+│  │  │  CHANGELOG.md
+│  │  │  LICENSE
+│  │  │  package.json
+│  │  │  README.md
+│  │  │  source-map.d.ts
+│  │  │  source-map.js
+│  │  │  
+│  │  └─lib
+│  │          array-set.js
+│  │          base64-vlq.js
+│  │          base64.js
+│  │          binary-search.js
+│  │          mapping-list.js
+│  │          quick-sort.js
+│  │          source-map-consumer.js
+│  │          source-map-generator.js
+│  │          source-node.js
+│  │          util.js
+│  │          
+│  ├─supports-preserve-symlinks-flag
+│  │  │  .eslintrc
+│  │  │  .nycrc
+│  │  │  browser.js
+│  │  │  CHANGELOG.md
+│  │  │  index.js
+│  │  │  LICENSE
+│  │  │  package.json
+│  │  │  README.md
+│  │  │  
+│  │  ├─.github
+│  │  │      FUNDING.yml
+│  │  │      
+│  │  └─test
+│  │          index.js
+│  │          
+│  └─vite
+│      │  client.d.ts
+│      │  index.cjs
+│      │  LICENSE.md
+│      │  package.json
+│      │  README.md
+│      │  
+│      ├─bin
+│      │      openChrome.applescript
+│      │      vite.js
+│      │      
+│      ├─dist
+│      │  ├─client
+│      │  │      client.mjs
+│      │  │      client.mjs.map
+│      │  │      env.mjs
+│      │  │      env.mjs.map
+│      │  │      
+│      │  ├─node
+│      │  │  │  cli.js
+│      │  │  │  constants.js
+│      │  │  │  index.d.ts
+│      │  │  │  index.js
+│      │  │  │  
+│      │  │  └─chunks
+│      │  │          dep-53dc1ef4.js
+│      │  │          dep-79892de8.js
+│      │  │          dep-98d07f71.js
+│      │  │          dep-c423598f.js
+│      │  │          dep-f63b56ae.js
+│      │  │          
+│      │  └─node-cjs
+│      │          publicUtils.cjs
+│      │          
+│      ├─node_modules
+│      │  └─.bin
+│      │          esbuild
+│      │          esbuild.cmd
+│      │          resolve
+│      │          resolve.cmd
+│      │          rollup
+│      │          rollup.cmd
+│      │          
+│      └─types
+│              customEvent.d.ts
+│              hmrPayload.d.ts
+│              hot.d.ts
+│              importGlob.d.ts
+│              importMeta.d.ts
+│              metadata.d.ts
+│              package.json
+│              
+└─public
+        vite.svg
+        
