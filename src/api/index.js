@@ -54,7 +54,7 @@ export const reqAddressInfo = () => req({url:'/api/user/userAddress/auth/findUse
 export const reqOrderInfo = () => req({url:'/api/order/auth/trade',method:'GET'});
 
 //提交订单 URL：/api/order/auth/submitOrder?tradeNo={tradeNo} POST
-export const reqSubmitOrder = (tradeNo,tradeInfo) => req({url:`/api/order/auth/submitOrder?tradeNo=${tradeNo}`,method:'POST',data:tradeInfo});
+export const reqSubmitOrder = (tradeNo,data) => req({url:`/api/order/auth/submitOrder?tradeNo=${tradeNo}`,method:'POST',data});
 
 //获取支付信息 URL：/api/payment/weixin/createNative/{orderId} GET
 export const reqPayInfo = (orderId) => req({url:`/api/payment/weixin/createNative/${orderId}`,method:'GET'});
@@ -63,4 +63,4 @@ export const reqPayInfo = (orderId) => req({url:`/api/payment/weixin/createNativ
 export const reqPayStatus = (orderId) => req({url:`/api/payment/weixin/queryPayStatus/${orderId}`,method:'GET'});
 
 //获取个人中心数据 URL：/api/order/auth/{page}/{limit} 请求方式：GET
-export const reqMyOrderList = (page,limit) => req({urL:`/api/order/auth/${page}/${limit}`,method:'GET'});
+export const reqMyOrderList = (page,limit) => req({url:`/api/order/auth/${page}/${limit}`,method:'GET'});

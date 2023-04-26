@@ -220,8 +220,9 @@
             cursor: pointer;
             width: 25%;
 
+            /* 不添加根目录/打包会自动去dist/assets文件夹下去找，而实际文件在public，被直接放在根目录 */
             .list-item {
-              background-image: url(icons.png);
+              background-image: url(/icons.png);
               width: 61px;
               height: 40px;
               display: block;

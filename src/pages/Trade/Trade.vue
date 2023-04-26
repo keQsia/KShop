@@ -111,7 +111,12 @@
       //提交订单最终地址
       userDefaultAddress(){
         //查找数组符合条件的元素返回
-        return this.addressInfo.find(item=>item.isDefault=='1');
+        return this.addressInfo.find(function(item){
+          return item.isDefault == '1';
+        })||{};//防止异步获取结果前得到undefined
+      },
+      fullAddress(){
+        return this.userDefaultAddress.fullAddress;
       }
     },
     methods:{
@@ -122,26 +127,27 @@
         });
         address.isDefault = '1';
       },
-      submitOrder() {
+      //提交订单，或者处理重复订单
+      async submitOrder() {
         //交易编码
         let { tradeNo } = this.orderInfo;
         //其余六个参数
         let data = {
           "consignee": this.userDefaultAddress.consignee,//名字
           "consigneeTel": this.userDefaultAddress.phoneNum,//手机
-          "deliveryAddress": this.userDefaultAddress.fullAddress,//地址
+          "deliveryAddress": this.fullAddress,//地址
           "paymentWay": "ONLINE",//支付方式
           "orderComment": this.msg,//留言
           "orderDetailList": this.orderInfo.detailArrayList,//购物清单
         }
         //提交订单
-        let res = this.$API.reqSubmitOrder(tradeNo,data);
+        let res = await this.$API.reqSubmitOrder(tradeNo,data);
         if(res.code == 200){
           this.orderId == res.data;
           //跳转到支付页面+路由传参
-          this.$router.push(`/pay?orderId=${this.orderId}`);
+          this.$router.push('/pay?orderId='+res.data);
         }else{//提交订单失败
-          console.log(res);
+          console.log(res.data);
         }
       }
     }

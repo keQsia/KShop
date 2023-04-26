@@ -55,9 +55,9 @@
           if(this.pageNo < pindex+1){//首页消失，左省略消失
             return [1,0,1,0,1];
           }else if(this.pageNo == pindex+1){//左省略消失
-            return [1,0,1,0,1];
+            return [1,0,1,1,1];
           }else if(this.pageNo == pindex+2){//右省略消失
-            return [1,1,0,1,0];
+            return [1,1,0,1,1];
           }else{//尾页消失，右省略消失
             return [1,1,0,1,0];
           }

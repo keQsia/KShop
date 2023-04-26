@@ -1,7 +1,5 @@
 <template>
   <div class="pay-main">
-    <el-button type="primary" icon="">测试</el-button>
-    
     <div class="pay-container">
       <div class="checkout-tit">
         <h4 class="tit-txt">
@@ -106,10 +104,16 @@
     methods:{
       //获取支付信息
       async getPayInfo(){
-        let result = await this.$API.reqPayInfo(this.orderId);
-        //成功，在组件当中存放支付信息
-        if(result.code==200){
-          this.payInfo = result.data;
+        try {
+          let result = await this.$API.reqPayInfo(this.orderId);
+          //成功，在组件当中存放支付信息
+          if(result.code==200){
+            this.payInfo = result.data;
+          }else{
+            console.log(result);
+          }
+        } catch (error) {
+          console.log(error.message);
         }
       },
       //弹出框

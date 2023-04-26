@@ -48,7 +48,9 @@
         //修改当前响应式数据
         this.curretIndex =index;
       });
-      
+    },
+    beforeDestroy(){
+      this.$bus.$off("getIndex");
     }
   }
 </script>

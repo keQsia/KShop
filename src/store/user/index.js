@@ -56,7 +56,7 @@ const actions = {
             setToken(result.data.token);
             return 'ok';
         }else{
-            return Promise.reject(new Error("failed"));
+            // return Promise.reject(new Error("failed"));
         }
     },
     //获取用户信息

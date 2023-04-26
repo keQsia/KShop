@@ -1,8 +1,6 @@
 //引入路由组件
-import Home from '@/pages/Home/Home.vue';
 import Login from '@/pages/Login/Login.vue';
 import Register from '@/pages/Register/Register.vue';
-import Search from '@/pages/Search/Search.vue';
 import Detail from '@/pages/Detail/Detail.vue';
 import AddCartSuccess from '@/pages/AddCartSuccess/AddCartSuccess.vue';
 import ShopCart from '@/pages/ShopCart/ShopCart.vue';
@@ -14,11 +12,12 @@ import Center from '@/pages/Center/Center.vue';
 import MyOrder from '@/pages/Center/MyOrder/MyOrder.vue';
 import GroupOrder from '@/pages/Center/GroupOrder/GroupOrder.vue';
 
+
 //路由配置信息，路由路径一定小写
 export default [
     {
         path:"/center",
-        component:Center,
+        component:() => import("@/pages/Center/Center.vue"),
         meta:{show:true},
         //二级路由组件，不用写/
         children:[
@@ -46,18 +45,37 @@ export default [
         path:"/pay",
         name:"pay",
         component:Pay,
-        meta:{show:true}
+        meta:{show:true},
+        beforeEnter:(to,from,next) => {
+            //去支付页面必须从交易页来
+            if(from.path == "/trade"){
+                next();
+            }else{
+                //其他路由组件停留在当前页面
+                next(false);
+            }
+        }
     },
     {
         path:"/trade",
         name:"trade",
-        component:Trade,
-        meta:{show:true}
+        component:() => import("@/pages/Trade/Trade.vue"),
+        meta:{show:true},
+        //路由独享守卫
+        beforeEnter:(to,from,next) => {
+            //去交易页面必须从购物车来
+            if(from.path == "/shopcart"){
+                next();
+            }else{
+                //其他路由组件停留在当前页面
+                next(false);
+            }
+        }
     },
     {
         path:"/shopcart",
         name:"shopcart",
-        component:ShopCart,
+        component:() => import("@/pages/ShopCart/ShopCart.vue"),
         meta:{show:true}
     },
     {
@@ -68,28 +86,28 @@ export default [
     },
     {
         path:"/detail/:skuid",
-        component:Detail,
+        component:() => import("@/pages/Detail/Detail.vue"),
         meta:{show:true}
     },
     {
         path:"/home",
-        component:Home,
+        component:() => import("@/pages/Home/Home.vue"),
         meta:{show:true}
     },
     {
         path:"/login",
-        component:Login,
+        component:() => import("@/pages/Login/Login.vue"),
         meta:{show:false}
     },
     {
         path:"/register",
-        component:Register,
+        component:() => import("@/pages/Register/Register.vue"),
         meta:{show:false}
     },
     {
         name:"search",
         path:"/search/:keyword?",
-        component:Search,
+        component:() => import("@/pages/Search/Search.vue"),
         meta:{show:true},
         //布尔值写法传递参数
         // props:true,

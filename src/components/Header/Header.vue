@@ -17,8 +17,8 @@
           </p>
         </div>
         <div class="typeList">
-          <a href="###">我的订单</a>
-          <a href="###">我的购物车</a>
+          <a href="javascript:void(0)" @click="$router.push('/center/myorder')">我的订单</a>
+          <a href="javascript:void(0)" @click="$router.push('/shopcart')">我的购物车</a>
           <a href="###">我的会员</a>
           <a href="###">卖家中心</a>
           <a href="###">企业采购</a>
@@ -100,6 +100,10 @@
       userName(){
         return this.$store.state.user.userInfo.name;
       }
+    },
+    //组件销毁前解绑事件
+    beforeDestroy(){
+      this.$bus.$off("deleteInput");
     }
 }
 </script>

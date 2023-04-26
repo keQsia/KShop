@@ -45,7 +45,6 @@ let router = new VueRouter({
  * next 放行函数，参数可以指定路由，如果next(false)代表中止跳转回退到from路由
  */
 router.beforeEach(async(to, from, next) => {
-    next();
     // 获取用户登录token，未登录不一定有token
     let token = store.state.user.token;
     //用户信息

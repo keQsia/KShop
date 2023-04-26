@@ -20,6 +20,16 @@
 <script>
   export default {
     name: 'PaySuccess',
+    //组件内守卫
+    beforeRouteEnter(to, from, next) {
+      // 不能获取组件实例，因组件实例还没被创建
+      if(from.path == '/pay') {
+        next();
+      } else {
+        next(false);
+      }
+      // next();
+    },
   }
 </script>
 

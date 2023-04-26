@@ -92,8 +92,8 @@
 <style lang="less" scoped>
   .login-container {
     .login-wrap {
-      height: 487px;
-      background-color: #e93854;
+      height: 495px;
+      background-color: #ffe7e7;
 
       .login {
         width: 1200px;

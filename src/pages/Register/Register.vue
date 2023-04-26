@@ -3,35 +3,36 @@
     <!-- 注册内容 -->
     <div class="register">
       <h3>注册新用户
-        <span class="go">我有账号，去 <a href="login.html" target="_blank">登陆</a>
+        <span class="go">我有账号，去 <a href="javascript:void(0)" @click="$router.push('/login')">登陆</a>
         </span>
       </h3>
       <div class="content">
         <label>手机号:</label>
-        <input type="text" placeholder="请输入你的手机号" v-model="phone">
-        <span class="error-msg">错误提示信息</span>
+        <!-- 必须带有name字段，标注哪个字段需要验证 -->
+        <input type="text" placeholder="请输入你的手机号" v-model="phone" name="phone" v-validate="{required:true,regex:/^1\d{10}$/}" :class="{invalid:errors.has('phone')}">
+        <span class="error-msg">{{ errors.first('phone') }}</span>
       </div>
       <div class="content">
         <label>验证码:</label>
-        <input type="text" placeholder="请输入验证码" v-model="code">
-        <button style="width: 80px;height: 38px;" @click="getCode">获取验证码</button>
-        <img ref="code" src="http://182.92.128.115/api/user/passport/code" alt="code">
-        <span class="error-msg">错误提示信息</span>
+        <input type="text" placeholder="请输入验证码" v-model="code" name="code" v-validate="{required:true,regex:/^\d{6}$/}" :class="{invalid:errors.has('code')}">
+        <button id="gcode" @click="getCode">获取验证码</button>
+        <!-- <img ref="code" src="http://182.92.128.115/api/user/passport/code" alt="code"> -->
+        <span class="error-msg">{{ errors.first('code') }}</span>
       </div>
       <div class="content">
         <label>登录密码:</label>
-        <input type="password" placeholder="请输入你的登录密码" v-model="password">
-        <span class="error-msg">错误提示信息</span>
+        <input type="password" placeholder="请输入你的登录密码" v-model="password" name="password" v-validate="{required:true,regex:/^[0-9A-Za-z]{8,20}$/}" :class="{invalid:errors.has('password')}">
+        <span class="error-msg">{{ errors.first('password') }}</span>
       </div>
       <div class="content">
         <label>确认密码:</label>
-        <input type="password" placeholder="请输入确认密码" v-model="password1">
-        <span class="error-msg">错误提示信息</span>
+        <input type="password" placeholder="请输入确认密码" v-model="password1" name="password1" v-validate="{required:true,is:password}" :class="{invalid:errors.has('password1')}">
+        <span class="error-msg">{{ errors.first('password1') }}</span>
       </div>
       <div class="controls">
-        <input name="m1" type="checkbox" :checked="agree">
+        <input name="agree" type="checkbox" :checked="agree" v-validate="{required:true,'agree':true}" :class="{invalid:errors.has('agree')}">
         <span>同意协议并注册《KShop用户协议》</span>
-        <span class="error-msg">错误提示信息</span>
+        <span class="error-msg">{{ errors.first('agree') }}</span>
       </div>
       <div class="btn">
         <button @click="userRegister">完成注册</button>
@@ -71,7 +72,7 @@
         //确认密码
         password1: '',
         //是否同意
-        agree: true
+        agree: false
       }
     },
     methods: {
@@ -87,13 +88,17 @@
       },
       //用户注册
       async userRegister(){
-        try {
-          const {phone,code,password,password1,agree} = this;
-          phone && code && password && password==password1 && await this.$store.dispatch('userRegister',{phone,password,code});
-          //成功跳转
-          this.$router.push('/login');
-        } catch (error) {
-          console.log(error.message);
+        const success = await this.$validator.validateAll();
+        //全部表单验证成功再发送请求
+        if(success){
+          try {
+            const {phone,code,password,password1,agree} = this;
+            await this.$store.dispatch('userRegister',{phone,password,code});
+            //成功跳转
+            this.$router.push('/login');
+          } catch (error) {
+            console.log(error.message);
+          }
         }
       }
     }
@@ -135,6 +140,18 @@
         padding-left: 390px;
         margin-bottom: 18px;
         position: relative;
+
+        #gcode {
+          width: 80px;
+          height: 30px;
+          margin-left: 5px;
+          background-color: #e1251b;
+          border-radius: 0;
+          font-family: 微软雅黑;
+          word-spacing: 4px;
+          border: 1px solid #e1251b;
+          color: #fff;
+        }
 
         label {
           font-size: 14px;
